@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Simple Password Generator</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"/>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<!-- Top area -->
+	<div id="topArea" class="container-fluid pb-2">
+		<div class="container">
+			<div class="row">			
+				<header class="col-md-12 pt-5 pb-4">
+					<h1>Simple Password Generator</h1>
+					<p class="lead">Simple password generator build in JavaScript + jQuery + Bootstrap</p>					
+				</header>
+			</div>
+		</div>
+	</div>
+
+	<div id="content">	
+
+		<!-- Result and buttons -->
+		<div class="container-fluid">
+			<div class="container pt-5 pb-2">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="copy" id="result"></div>
+					</div>
+					<div class="col-md-4">
+						<div id="generate" class="btn btn-block btn-secondary mt-1">Generate</div>
+						<div id="clear" class="btn btn-block btn-danger mt-1">Clear</div>
+					</div>				
+				</div>
+			</div>
+		</div>
+		
+		<div class="container-fluid">
+			<div class="container pb-2">
+				<div class="row">
+
+					<!-- Tips area -->	
+					<div class="col-md-12 pt-2">
+						<div class="alert alert-info">
+							<b>Tip!</b> If you only select numbers, you can generate a PIN code
+						</div>
+					</div>
+
+					<!-- Alert when copy pwd -->
+					<div class="col-md-12 pb-4">
+						<div class="notification">
+							<div class="alert alert-success copied-msg-container hidden">
+								Copied!
+							</div>
+						</div>
+					</div>	
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="container pb-5">
+				<div class="row">
+					<!-- Options -->
+					<div class="col-md-4">
+						<h2>Options</h2>
+						<form id="theForm">
+							<div class="form-group mb-3">
+								<label>Length</label><br/>
+								<span class="btn-decrease"> - </span>
+								<input class="input-length" type="text" name="length" value="12"/>
+								<span class="btn-increase"> + </span><br/>
+							</div>
+							<div class="form-check form-switch mb-1">
+								<input class="form-check-input" type="checkbox" name="include_letter" value="1" checked/> ¿Include letters?
+							</div>
+							<div class="form-check form-switch mb-1">
+								<input class="form-check-input" type="checkbox" name="include_number" value="1" checked/> ¿Include numbers?
+							</div>
+							<div class="form-check form-switch mb-1">
+								<input class="form-check-input" type="checkbox" name="include_symbol" value="1" checked/> ¿Include symbols?
+							</div>
+						</form>
+					</div>
+					<div class="col-md-4">
+					</div>
+					<!-- History -->
+					<div class="col-md-4">
+						<h2>History</h2>
+						<div id="history"></div>
+					</div>
+				</div>
+			</div>
+		</div>	
+
+
+	</div>
+
+</body>
+</html>
